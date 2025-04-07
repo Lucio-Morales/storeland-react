@@ -9,16 +9,16 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="flex items-center gap-2">
+    <form onSubmit={handleSearch} className="flex items-center gap-2 h-10">
       <input
         type="text"
         placeholder="Buscar productos..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="w-72 px-4 py-4 rounded-md border border-gray-400 focus:outline-none focus:ring-2"
+        className="w-80 h-full px-4 py-4 rounded-md border border-gray-400 focus:outline-none focus:ring-2"
         style={{ paddingLeft: '12px' }}
       />
-      <button>Buscar</button>
+      <button className="h-full">Buscar</button>
     </form>
   );
 };
