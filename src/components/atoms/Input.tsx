@@ -18,16 +18,26 @@ const Input: React.FC<InputProps> = ({
   label,
 }) => {
   return (
-    <div>
-      <label htmlFor={name}>{label}</label>
+    <div className="flex flex-col">
+      <label
+        htmlFor={name}
+        className="block text-sm font-medium text-gray-700 mb-2"
+      >
+        {label}
+      </label>
       <input
+        className={`w-full px-4 py-2 border rounded-lg text-sm outline-none transition-all duration-150 ${
+          error
+            ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
+            : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
+        }`}
         type={type}
         name={name}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
       />
-      {error && <span>{error}</span>}
+      {error && <p className="text-red-500 text-xs mt-2">{error}</p>}
     </div>
   );
 };

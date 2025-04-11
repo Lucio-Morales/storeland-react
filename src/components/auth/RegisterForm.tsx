@@ -1,6 +1,6 @@
 import { useForm } from '../../hooks/auth/useForm';
 import Button from '../atoms/Button';
-import Input from '../atoms/Input';
+import Form from '../ui/form/Form';
 
 const RegisterForm: React.FC = () => {
   const { values, errors, handleChange, handleSubmit } = useForm({
@@ -9,38 +9,36 @@ const RegisterForm: React.FC = () => {
     password: '',
   });
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <Input
-        label="Name"
-        type="text"
-        name="name"
-        placeholder="Enter your name"
-        value={values.name}
-        onChange={handleChange}
-        error={errors.name || ''}
-      />
-      <Input
-        label="Email"
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        value={values.email}
-        onChange={handleChange}
-        error={errors.email || ''}
-      />
-      <Input
-        label="Password"
-        type="password"
-        name="password"
-        placeholder="Enter your password"
-        value={values.password}
-        onChange={handleChange}
-        error={errors.password || ''}
-      />
+  const fields = [
+    {
+      label: 'Name',
+      type: 'text',
+      name: 'name',
+      placeholder: 'Enter your name',
+    },
+    {
+      label: 'Email',
+      type: 'email',
+      name: 'email',
+      placeholder: 'Enter your email',
+    },
+    {
+      label: 'Password',
+      type: 'password',
+      name: 'password',
+      placeholder: 'Enter your password',
+    },
+  ];
 
-      <Button label="Submit" type="submit" />
-    </form>
+  return (
+    <Form
+      fields={fields}
+      values={values}
+      errors={errors}
+      onChange={handleChange}
+      onSubmit={handleSubmit}
+      submitLabel="Register"
+    />
   );
 };
 

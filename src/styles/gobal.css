@@ -34,10 +34,6 @@ a {
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: var(--secondary-color);
-}
-
 button {
     background-color: var(--primary-color);
     color: white;
@@ -51,25 +47,6 @@ button {
 
 button:hover {
     background-color: var(--secondary-color);
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3 ease;
-}
-
-.card:hover {
-    transform: translateY(-3px)
 }
 
 img {

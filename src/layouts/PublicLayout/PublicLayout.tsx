@@ -4,10 +4,12 @@ import Footer from '../../components/ui/footer/Footer';
 
 const PublicLayout = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-6 border-2">
-        <Outlet />
+      <main className="flex-grow flex justify-center px-4 py-8 border-2 ">
+        <div className="border-2 max-w-6xl mx-auto w-full">
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </div>

@@ -35,7 +35,7 @@ export const useForm = (initialValues: FormValues) => {
       const newErrors: FormErrors = {};
 
       Object.keys(values).forEach((key) => {
-        const error = validateField(key, values[key as keyof FormValues]);
+        const error = validateField(key, values[key as keyof FormValues] ?? '');
         if (error) newErrors[key as keyof FormValues] = error;
       });
 
