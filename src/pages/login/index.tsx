@@ -10,28 +10,28 @@ const LoginPage = () => {
 
   const fields = [
     {
-      label: 'Email',
+      label: 'Correo electronico',
       type: 'email',
       name: 'email',
-      placeholder: 'Enter your email',
+      placeholder: 'Ingresa tu correo electronico.',
     },
     {
-      label: 'Password',
+      label: 'Contraseña',
       type: 'password',
       name: 'password',
-      placeholder: 'Enter your password.',
+      placeholder: 'Ingresa tu contraseña.',
     },
   ];
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="p-8 bg-white mt-8">
+      <h1 className="text-3xl mb-4">Iniciar sesion</h1>
       <Form<FormValues>
         fields={fields}
         values={values}
         errors={errors}
         onChange={handleChange}
         onSubmit={handleSubmit}
-        submitLabel="Login"
+        submitLabel="Ingresar"
       />
     </div>
   );

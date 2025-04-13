@@ -1,11 +1,10 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-
 :root {
-    --bg-color: #dbdbdb;
+    --bg-color: #d8d8d8;
     --text-color: #181818;
     --primary-color: #ff651e;
     --secondary-color: #da560a;
@@ -13,7 +12,12 @@
     --border-color:#444;
     --card-bg: #a1a1a1;
 }
+
+html {
+    overflow-y: scroll;
+}
 body {
+    margin:0;
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -34,7 +38,7 @@ a {
     transition: color 0.3s ease;
 }
 
-button {
+/* button {
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -43,11 +47,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3 ease;
-}
+} */
 
-button:hover {
+/* button:hover {
     background-color: var(--secondary-color);
-}
+} */
 
 img {
     max-width: 100%;

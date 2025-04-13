@@ -26,7 +26,7 @@ const Form = <T extends Record<string, string>>({
   submitLabel = 'Submit',
 }: FormProps<T>) => {
   return (
-    <form onSubmit={onSubmit} className="flex flex-col gap-4">
+    <form onSubmit={onSubmit} className="flex flex-col gap-4 ">
       {fields.map((field) => (
         <div key={field.name}>
           <Input

@@ -1,24 +1,25 @@
 import Form from '../../components/ui/form/Form';
 import { useForm } from '../../hooks/auth/useForm';
 import { FormValues } from '../../types/form';
+
 const fields = [
   {
-    label: 'Name',
+    label: 'Nombre',
     type: 'text',
     name: 'name',
-    placeholder: 'Enter your name',
+    placeholder: 'Ingresa tu nombre.',
   },
   {
-    label: 'Email',
+    label: 'Correo electronico.',
     type: 'email',
     name: 'email',
-    placeholder: 'Enter your email',
+    placeholder: 'Ingresa tu correo electronico.',
   },
   {
-    label: 'Password',
+    label: 'Contraseña',
     type: 'password',
     name: 'password',
-    placeholder: 'Enter your password',
+    placeholder: 'Ingresa tu contraseña.',
   },
 ];
 
@@ -30,18 +31,16 @@ const RegisterPage = () => {
   });
 
   return (
-    <div>
-      <div>
-        <h1>Register</h1>
-        <Form<FormValues>
-          fields={fields}
-          values={values}
-          errors={errors}
-          onChange={handleChange}
-          onSubmit={handleSubmit}
-          submitLabel="Register"
-        />
-      </div>
+    <div className="p-8 bg-white mt-8">
+      <h1 className="text-3xl mb-4">Crear cuenta</h1>
+      <Form<FormValues>
+        fields={fields}
+        values={values}
+        errors={errors}
+        onChange={handleChange}
+        onSubmit={handleSubmit}
+        submitLabel="Crear cuenta"
+      />
     </div>
   );
 };
