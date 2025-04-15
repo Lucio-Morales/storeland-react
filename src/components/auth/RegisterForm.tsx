@@ -1,5 +1,4 @@
 import { useForm } from '../../hooks/auth/useForm';
-import Button from '../atoms/Button';
 import Form from '../ui/form/Form';
 
 const RegisterForm: React.FC = () => {

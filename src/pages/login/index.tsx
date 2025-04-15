@@ -23,8 +23,8 @@ const LoginPage = () => {
     },
   ];
   return (
-    <div className="p-8 bg-white mt-8">
-      <h1 className="text-3xl mb-4">Iniciar sesion</h1>
+    <div className="p-12 bg-white mt-10 max-w-2xl mx-auto shadow-lg rounded-lg">
+      <h1 className="text-3xl mb-6">Iniciar sesion</h1>
       <Form<FormValues>
         fields={fields}
         values={values}
