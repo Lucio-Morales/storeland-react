@@ -20,23 +20,17 @@ const Header = () => {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
-                  isActive
-                    ? 'bg-[#aed0e9] text-[#060215]'
-                    : 'hover:bg-[#94a8cf] hover:text-white'
-                }`
+                `w-32 text-center px-4 py-2 rounded-xl text-sm font-semibold border transition-all duration-300
+       border-[#F97316] ${
+         isActive
+           ? 'bg-[#ffd8a9] text-[#D97706]'
+           : 'text-[#F97316] hover:bg-[#ffd8a9] hover:text-[#D97706]'
+       }`
               }
             >
               {link.label}
             </NavLink>
           ))}
-
-          {/* <Link
-            to="/register"
-            className="ml-2 bg-[#94B9FF] text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-[#6882B4] transition duration-300"
-          >
-            Crear cuenta
-          </Link> */}
         </nav>
       </div>
     </header>
